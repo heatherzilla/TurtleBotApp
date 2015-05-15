@@ -3,12 +3,15 @@ package com.example.turtlebotproject;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.view.View.OnTouchListener;
 import com.example.turtlebotproject.JoystickMovedListener;
 import com.example.turtlebotproject.JoystickView;
 
@@ -28,6 +31,12 @@ public class joystickActivity extends MainActivity {
 	//joystick variables
 	TextView txtX, txtY;
 	JoystickView joystick;
+
+    // create arrow buttons
+    ImageButton up;
+    ImageButton down;
+    ImageButton left;
+    ImageButton right;
 	
 	// speed factor for velocity of turtlebot
 	int factor = 100;
@@ -46,6 +55,12 @@ public class joystickActivity extends MainActivity {
 		addRadioButtonListener1();
 		addRadioButtonListener2();
 		addRadioButtonListener3();
+
+        //arrow button listeners
+        addListenerOnButtonLeft();
+        addListenerOnButtonRight();
+        addListenerOnButtonForward();
+        addListenerOnButtonBackward();
 		
 		// joystick variables
 		// variables show x and y joystick movement
@@ -126,6 +141,82 @@ public class joystickActivity extends MainActivity {
 			}
 		});
 	}
+
+    //turn left
+    public void addListenerOnButtonLeft() {
+        left = (ImageButton) findViewById(R.id.imageButton3);
+
+        left.setOnTouchListener(new OnTouchListener() {
+                                    @Override
+                                    public boolean onTouch(View arg0, MotionEvent event) {
+                                        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                                            TurtleBotController.drive(-(10*factor), 10*factor);
+                                        }
+                                        else if (event.getAction() == MotionEvent.ACTION_UP){
+                                            TurtleBotController.drive(0, 0);
+                                        }
+                                    return false;}
+                                }
+        );
+    }
+
+    //turn right
+    public void addListenerOnButtonRight(){
+        right = (ImageButton) findViewById(R.id.imageButton4);
+
+        right.setOnTouchListener(new OnTouchListener() {
+
+                                     public boolean onTouch(View arg0, MotionEvent event) {
+                                         if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                                             TurtleBotController.drive(10*factor, -(10*factor));
+                                         } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                                             TurtleBotController.drive(0, 0);
+                                         }
+                                         return false;
+                                     }
+                                 }
+        );
+    }
+    //reverse
+    private void addListenerOnButtonBackward() {
+
+        down = (ImageButton) findViewById(R.id.imageButton);
+
+        down.setOnTouchListener(new OnTouchListener() {
+
+                                    public boolean onTouch(View arg0, MotionEvent event) {
+                                        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                                            TurtleBotController.drive(-(10*factor), -(10*factor));
+                                        } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                                            TurtleBotController.drive(0, 0);
+                                        }
+                                        return false;
+                                    }
+                                }
+        );
+    }
+
+    //forward
+    private void addListenerOnButtonForward() {
+
+        up = (ImageButton) findViewById(R.id.imageButton2);
+
+        up.setOnTouchListener(new OnTouchListener() {
+
+                                  public boolean onTouch(View arg0, MotionEvent event) {
+                                      /*byte[] forward = new byte[]{(byte) 128, (byte) 131, (byte) 137, (byte) 200, (byte) 0,
+                                              (byte) 128, (byte) 0};*/
+                                      if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                                          /*TurtleBotController.sendRaw(forward);*/
+                                          TurtleBotController.drive(10*factor, 10*factor);
+                                      } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                                          TurtleBotController.drive(0, 0);
+                                      }
+                                      return false;
+                                  }
+                              }
+        );
+    }
 	
 	//joystick method creates the listener, and sets the value of the orientation to the screen
     private JoystickMovedListener _listener = new JoystickMovedListener() {

@@ -84,6 +84,10 @@
             android:name="com.example.turtlebotproject.homeActivity" >
         </activity>
         <activity
+            android:label="@string/jingleName"
+            android:name="com.example.turtlebotproject.jingleActivity" >
+        </activity>
+        <activity
             android:name="com.example.turtlebotproject.BTDevicesScanActivity"
             android:label="@string/title_activity_btdevices_scan" >
         </activity>

@@ -25,6 +25,7 @@ public class scriptsActivity extends MainActivity {
 	Button script8;
 	Button script9;
 	Button script10;
+    Button script11;
 	Button stopScript;
 	
 	@Override
@@ -48,6 +49,7 @@ public class scriptsActivity extends MainActivity {
 		addListenerOnScript8();
 		addListenerOnScript9();
 		addListenerOnScript10();
+        addListenerOnScript11();
 		addListenerOnStopScript();
 	}
 	
@@ -300,6 +302,25 @@ public class scriptsActivity extends MainActivity {
 			}
 		});
 	}
+    // script11 Jinglebells
+    public void addListenerOnScript11() {
+
+        final Context context = this;
+
+        // assign buttons to xml button ids
+        script11 = (Button) findViewById(R.id.button11);
+
+        script11.setOnClickListener(new OnClickListener() {
+
+            public void onClick(View arg0) {
+
+                // not implemented yet
+                Intent intent = new Intent(context, jingleActivity.class);
+                startActivity(intent);
+
+            }
+        });
+    }
 	// stop script (button 20)
 	public void addListenerOnStopScript() {
 		

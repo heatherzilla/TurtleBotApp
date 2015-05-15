@@ -81,13 +81,16 @@
         android:text="Velocity"
         android:textAppearance="?android:attr/textAppearanceMedium" />
     
+
+
     <com.example.turtlebotproject.JoystickView
         android:id="@+id/joystickView"
         android:layout_width="175dip"
         android:layout_height="175dip"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp" />
+        android:layout_centerHorizontal="false"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="140dp"/>
 
     <RadioGroup
         android:id="@+id/radioGroup1"
@@ -115,5 +118,42 @@
             android:layout_height="wrap_content"
             android:text="Slow" />
     </RadioGroup>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:layout_alignBottom="@+id/joystickView"
+        android:layout_alignRight="@+id/radioGroup1"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="35dp"
+        android:src="@drawable/down"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton2"
+        android:src="@drawable/up"
+        android:layout_alignTop="@+id/joystickView"
+        android:layout_alignLeft="@+id/imageButton" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton3"
+        android:src="@drawable/left"
+        android:layout_alignBottom="@+id/joystickView"
+        android:layout_alignRight="@+id/radioGroup1"
+        android:layout_marginBottom="63dp"
+        android:layout_marginRight="100dp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton4"
+        android:src="@drawable/right"
+        android:layout_alignBottom="@+id/joystickView"
+        android:layout_alignRight="@+id/radioGroup1"
+        android:layout_marginBottom="63dp"
+        android:layout_marginRight="-30dp"/>
 
 </RelativeLayout>

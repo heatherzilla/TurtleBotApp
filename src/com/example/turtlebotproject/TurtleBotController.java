@@ -111,35 +111,14 @@ public class TurtleBotController {
 		}
 	}
 	
-	private static byte reverse(byte b)
-	{
-		byte out = 0;
-		for(int i = 0;i < 8;++i)
-		{
-			out |= b & 1;
-			out = (byte)(out << 1);
-			b = (byte)(b >> 1);
-		}
-		return out;
-	}
-	
+
 	private static byte[] getShort(int in)
 	{
 		byte b1 = 0;
 		byte b2 = 0;
-		for(int i = 0;i < 8;++i)
-		{
-			b1 |= in & 1;
-			b1 = (byte)(b1 << 1);
-			in = in >> 1;
-		}
-		for(int i = 0;i < 8;++i)
-		{
-			b2 |= in & 1;
-			b2 = (byte)(b2 << 1);
-			in = in >> 1;
-		}
-		byte [] out = {reverse(b2), reverse(b1)};
+        b1 =(byte)(in >> 8);
+        b2 = (byte)(in & 255);
+        byte[] out ={b1, b2};
 		return out;
 	}
 	

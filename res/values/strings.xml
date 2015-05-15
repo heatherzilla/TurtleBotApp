@@ -20,6 +20,7 @@
     <string name="spot_coverName">Spot + Cover</string>
     <string name="tagName">Tag</string>
     <string name="wimpName">Wimp</string>
+    <string name="jingleName">Jingle</string>
     <string name="startScript">Start Script</string>
     <string name="stopScript">Stop Script</string>
     <string name="btdevices_cancel">Scan for devices</string>
