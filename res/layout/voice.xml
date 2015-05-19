@@ -4,37 +4,59 @@
     android:layout_height="match_parent"
     android:background="#f2f2f2" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/joystickPage" />
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffffff" >
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:drawableTop="@drawable/ic_tabbar_joystick_normal"
+            android:text="@string/joystickPage"
+            android:background="#ffffff"
+            android:textColor="#7597B3"
+            android:layout_weight=".25" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/button3"
-        android:layout_toRightOf="@+id/button1"
-        android:text="@string/scriptPage" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/button3"
+            android:layout_toRightOf="@+id/button1"
+            android:drawableTop="@drawable/ic_tabbar_script_normal"
+            android:text="@string/scriptPage"
+            android:background="#ffffff"
+            android:textColor="#7597B3"
+            android:layout_weight=".25" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/voicePage"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@id/button4" />
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/accPage" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/voicePage"
+            android:layout_alignParentTop="true"
+            android:drawableTop="@drawable/ic_tabbar_voice_normal"
+            android:layout_toLeftOf="@id/button4"
+            android:background="#ffffff"
+            android:textColor="#7597B3"
+            android:layout_weight=".25" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:drawableTop="@drawable/ic_tabbar_acc_normal"
+            android:text="@string/accPage"
+            android:background="#ffffff"
+            android:textColor="#7597B3"
+            android:layout_weight=".25" />
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
