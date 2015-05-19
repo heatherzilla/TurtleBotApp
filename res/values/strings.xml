@@ -9,6 +9,7 @@
     <string name="accPage">Accel-mtr</string>
     <string name="joystickPage">Joystick</string>
     <string name="scriptPage">Scripts</string>
+    <string name="voicePage">Voice-ctrl</string>
     <string name="title_activity_btdevices_view">Bluetooth Devices</string>
     <string name="banjoName">Banjo</string>
     <string name="cover_dockName">Cover + Dock</string>

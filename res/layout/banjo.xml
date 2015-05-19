@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f2f2f2"
     android:orientation="vertical" >
 
     <TextView
@@ -11,6 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="42dp"
         android:gravity="center"
+        android:textColor="#000000"
         android:text="The robot plays a note of a chord for each of its four cliff sensors. Select the chord using the bumper, as follows:"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -31,6 +33,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:text="Right/left bumper: D major 7"
+        android:textColor="#000000"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -41,6 +44,7 @@
         android:layout_below="@+id/TextView02"
         android:gravity="center"
         android:text="Both bumpers: C major"
+        android:textColor="#000000"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -52,6 +56,7 @@
         android:layout_marginTop="19dp"
         android:gravity="center"
         android:text="No Bumper: G major"
+        android:textColor="#000000"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button

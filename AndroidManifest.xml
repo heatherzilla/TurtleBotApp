@@ -6,6 +6,7 @@
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-feature android:name="android.hardware.sensor.accelerometer" />
     
     <uses-sdk
         android:minSdkVersion="8"
@@ -24,10 +25,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.turtlebotproject.MainActivity2"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
             android:name="com.example.turtlebotproject.joystickActivity"
             android:label="@string/joystickName" >
         </activity>
@@ -37,11 +34,13 @@
         </activity>
         <activity
             android:name="com.example.turtlebotproject.accActivity"
-            android:label="@string/accName" >
+            android:label="@string/accName"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.example.turtlebotproject.BTDevicesView"
-            android:label="@string/title_activity_btdevices_view" >
+            android:label="@string/title_activity_btdevices_view"
+            android:theme="@style/ListFont">
         </activity>
 		<activity
             android:label="@string/banjoName"
@@ -51,6 +50,9 @@
             android:label="@string/cover_dockName"
             android:name="com.example.turtlebotproject.cover_dockActivity" >
         </activity>
+        <activity android:name="com.example.turtlebotproject.voiceActivity"
+            android:label="Voice Control" >
+            </activity>
         <activity
             android:label="@string/coverName"
             android:name="com.example.turtlebotproject.coverActivity" >
@@ -84,12 +86,13 @@
             android:name="com.example.turtlebotproject.homeActivity" >
         </activity>
         <activity
-            android:label="@string/jingleName"
+            android:label="Jingle Bells"
             android:name="com.example.turtlebotproject.jingleActivity" >
         </activity>
         <activity
             android:name="com.example.turtlebotproject.BTDevicesScanActivity"
-            android:label="@string/title_activity_btdevices_scan" >
+            android:label="@string/title_activity_btdevices_scan"
+            android:theme="@style/ListFont">
         </activity>
         
     </application>

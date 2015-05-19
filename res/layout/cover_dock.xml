@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f2f2f2"
     android:orientation="vertical" >
 
     <TextView
@@ -11,6 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="42dp"
         android:gravity="center"
+        android:textColor="#000000"
     	android:text="Identical to the Cover script, with one exception. If the robot sees an infrared signal from an iRobot Home Base, it uses that signal to dock with the Home Base and recharge itself."
         android:textAppearance="?android:attr/textAppearanceMedium" />
 

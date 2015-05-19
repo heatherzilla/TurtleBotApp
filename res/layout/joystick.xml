@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/accPage" />
+    android:layout_height="match_parent"
+    android:background="#f2f2f2" >
 
     <Button
         android:id="@+id/button1"
@@ -27,14 +20,30 @@
         android:layout_toLeftOf="@+id/button3"
         android:layout_toRightOf="@+id/button1"
         android:text="@string/scriptPage" />
-    
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/voicePage"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/button4" />
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/accPage" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/textView6"
         android:layout_below="@+id/textView6"
-        android:text="Stopped" />
+        android:text="Stopped"
+        android:textColor="#000000"/>
 
     <TextView
         android:id="@+id/textView4"
@@ -43,7 +52,8 @@
         android:layout_above="@+id/textView5"
         android:layout_alignRight="@+id/button1"
         android:layout_marginRight="18dp"
-        android:text="X:" />
+        android:text="X:"
+        android:textColor="#000000"/>
 
     <TextView
         android:id="@+id/textView6"
@@ -52,7 +62,8 @@
         android:layout_above="@+id/radioGroup1"
         android:layout_alignLeft="@+id/textView4"
         android:text="Orientation"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"/>
 
     <TextView
         android:id="@+id/textView5"
@@ -60,7 +71,8 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/textView4"
         android:layout_below="@+id/textView2"
-        android:text="Y:" />
+        android:text="Y:"
+        android:textColor="#000000"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -68,7 +80,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView2"
         android:layout_below="@+id/textView2"
-        android:text="Stopped" />
+        android:text="Stopped"
+        android:textColor="#000000"/>
 
     <TextView
         android:id="@+id/textView1"
@@ -79,8 +92,9 @@
         android:layout_marginRight="65dp"
         android:layout_marginTop="49dp"
         android:text="Velocity"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-    
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"/>
+
 
 
     <com.example.turtlebotproject.JoystickView
@@ -97,26 +111,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1" >
+        android:layout_below="@+id/textView1">
 
         <RadioButton
             android:id="@+id/radio0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="Fast" />
+            android:text="Fast"
+            android:textColor="#000000"/>
 
         <RadioButton
             android:id="@+id/radio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Medium" />
+            android:text="Medium"
+            android:textColor="#000000"/>
 
         <RadioButton
             android:id="@+id/radio2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Slow" />
+            android:text="Slow"
+            android:textColor="#000000"/>
     </RadioGroup>
     <ImageButton
         android:layout_width="wrap_content"

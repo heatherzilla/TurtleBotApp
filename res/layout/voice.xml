@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textColor="#000000"
-    android:background="#f2f2f2">
+    android:background="#f2f2f2" >
 
     <Button
         android:id="@+id/button1"
@@ -28,8 +27,7 @@
         android:layout_height="wrap_content"
         android:text="@string/voicePage"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/button4" />
-
+        android:layout_toLeftOf="@id/button4" />
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
@@ -37,25 +35,46 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:text="@string/accPage" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical" >
+        <ScrollView
+            android:id="@+id/sc1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+            <TextView
+                android:id="@+id/txtSpeechInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:textColor="#000000"
+                android:textSize="26dp"
+                android:textStyle="normal"
+                android:text= "" />
+        </ScrollView>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button6"
-        android:layout_alignRight="@+id/button6"
-        android:layout_marginBottom="55dp"
-        android:layout_toRightOf="@+id/button1"
-        android:text="Enable" />
-
-    <Button
-        android:id="@+id/button6"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="79dp"
-        android:layout_toLeftOf="@+id/button4"
-        android:layout_toRightOf="@+id/button1"
-        android:text="Disable" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/ic_btn" />
+
+
+    </LinearLayout>
 
 </RelativeLayout>

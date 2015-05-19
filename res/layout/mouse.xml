@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f2f2f2"
     android:orientation="vertical" >
 
     <TextView
@@ -11,6 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="42dp"
         android:gravity="center"
+        android:textColor="#000000"
     	android:text="The robot drives in search of a wall. Once a wall is found, the robot drives along the wall, traveling around circumference of the room."
         android:textAppearance="?android:attr/textAppearanceMedium" />
 

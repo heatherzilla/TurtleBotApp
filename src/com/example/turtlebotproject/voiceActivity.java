@@ -6,8 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 
-public class accActivity extends MainActivity {
+public class voiceActivity extends MainActivity {
 
     // create page buttons
     Button joyButton;
@@ -15,24 +16,18 @@ public class accActivity extends MainActivity {
     Button accButton;
     Button voiceButton;
 
-    // create accelerometer buttons
-    Button accEnable;
-    Button accDisable;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.acc);
+        setContentView(R.layout.voice);
 
         // setup page button listeners
         addListenerOnButton();
         addListenerOnButton2();
         addListenerOnButton3();
         addListenerOnButton4();
-
         //setup accelerometer buttons
-        addListenerOnEnableButton();
-        addListenerOnDisableButton();
+
     }
 
     // BUTTONS FOR LINKING TO SCREENS
@@ -113,36 +108,5 @@ public class accActivity extends MainActivity {
         });
     }
 
-    // BUTTONS FOR ENABLING/DISABLING ACCELEROMETER
-    // acc enable button listener
-    public void addListenerOnEnableButton() {
-
-        // assign buttons to xml button ids
-        accEnable = (Button) findViewById(R.id.button5);
-
-        // assign accEnable listener
-        accEnable.setOnClickListener(new OnClickListener() {
-
-            public void onClick(View arg0) {
-
-                // not implemented yet
-            }
-        });
-    }
-    // acc disable button listener
-    public void addListenerOnDisableButton() {
-
-        // assign buttons to xml button ids
-        accDisable = (Button) findViewById(R.id.button6);
-
-        // assign accDisable listener
-        accDisable.setOnClickListener(new OnClickListener() {
-
-            public void onClick(View arg0) {
-
-                // not implemented yet
-            }
-        });
-    }
 
 }
